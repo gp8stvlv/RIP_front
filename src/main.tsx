@@ -7,7 +7,7 @@ import { EquipmentDetail } from './App';
 ReactDOM.render(
   <HashRouter>
     <Routes>
-      <Route path="/bouquetss/" element={<Catalog />} />
+      <Route path="/catalog/" element={<Catalog />} />
       <Route path="/bouquetss/:id/" element={<EquipmentDetail />} />
     </Routes>
   </HashRouter>,
