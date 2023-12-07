@@ -12,6 +12,10 @@ export default defineConfig({
     //   },
     //},
   },
+  build: {
+    // other build options...
+    assetsInlineLimit: 0, // Add this line to ensure module scripts are not inlined
+  },
   plugins: [react()],
   base: '/RIP_front/',
 })
