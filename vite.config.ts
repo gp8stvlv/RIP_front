@@ -13,5 +13,5 @@ export default defineConfig({
     //},
   },
   plugins: [react()],
-  base: '/RIP_front/',
+  base: '/vite-deploy-demo/RIP_front/',
 })
