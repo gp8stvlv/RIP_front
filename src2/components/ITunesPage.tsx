@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import { Card, Col, Row, Button, Spinner } from 'react-bootstrap'
 import './ITunesPage.css'
+import React from 'react'
 
 interface ITunesMusic {
     wrapperType: string
