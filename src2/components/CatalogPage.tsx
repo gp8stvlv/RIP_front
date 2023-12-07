@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import './Catalog.css';
 import logoImage from './CH.png';
+import React from 'react';
 
 // Определение типа для объекта "Букет"
 interface chemistryEquipment {

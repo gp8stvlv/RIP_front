@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Catalog } from './App';
 import { EquipmentDetail } from './App';
-
+import React from 'react';
 
 ReactDOM.render(
   <HashRouter>
