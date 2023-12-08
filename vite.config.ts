@@ -8,5 +8,5 @@ export default defineConfig({
   },
   plugins: [react()],
   // Remove base path temporarily
-  // base: '/RIP_front/',
+  base: '/',
 });
