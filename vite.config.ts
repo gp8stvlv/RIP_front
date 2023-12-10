@@ -6,7 +6,6 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0,
   },
+  base: "",
   plugins: [react()],
-  // Remove base path temporarily
-  base: '/',
 });
