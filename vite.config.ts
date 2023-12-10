@@ -6,6 +6,6 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0,
   },
-  base: "RIP_front",
+  base: "/",
   plugins: [react()],
 });
