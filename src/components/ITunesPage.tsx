@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import { Card, Col, Row, Button, Spinner } from 'react-bootstrap'
 import './ITunesPage.css'
 import React from 'react'
@@ -22,7 +22,7 @@ const getMusicByName = async (name = ''): Promise<ITunesResult> => {
         .catch(() => ({ resultCount: 0, results: [] }))
 }
 
-const ITunesPage: FC = () => {
+const ITunesPage: React.FC = () => {
     const [searchValue, setSearchValue] = useState('')
 
     const [loading, setLoading] = useState(false)

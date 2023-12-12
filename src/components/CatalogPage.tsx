@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import './Catalog.css';
@@ -39,7 +39,7 @@ const chemistryEquipmentMocks: chemistryEquipment[] = [
 ];
 
 // Компонент "Catalog" представляет собой функциональный компонент React
-const CatalogPage: FC = () => {
+const CatalogPage: React.FC = () => {
     // Хук useNavigate предоставляет функцию для навигации между страницами
     const navigateTo = useNavigate();
     // Хук useLocation предоставляет информацию о текущем URL
