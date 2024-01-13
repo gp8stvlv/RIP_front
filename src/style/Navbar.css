@@ -1,0 +1,100 @@
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.color-navbar {
+  background-color: #224504;
+  width: 100%;
+}
+
+.color-navbar .brand-text {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand.active,
+.navbar-brand:active,
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.btns-log {
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: inherit;
+  margin-right: 10px;
+}
+
+.btns-log:hover {
+  background-color: #ffffff;
+  border-radius: 13px;
+  color: #224504;
+  transform: translateY(-0.5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+body .overlay {
+  background-color: rgba(0, 0, 0, 1) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1999;
+  /* Выше, чем остальные элементы, но ниже, чем меню */
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.user-profile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.user-profile-menu.show {
+  right: 0;
+  z-index: 2000;
+}
+
+.user-profile-menu-header {
+  padding: 10px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-menu-content {
+  padding: 20px;
+}
+
+.user-profile-menu-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.user-icon:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}

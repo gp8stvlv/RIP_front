@@ -1,0 +1,34 @@
+.footer-text {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: #cae4ff;
+}
+
+.contact-button {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 12px;
+    font-size: 17px;
+    border: 0.5px solid #cae4ff;
+    color: #cae4ff;
+
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: #224504;
+}
+
+.color-navbar {
+    background-color: #224504;
+    width: 100%;
+}
+
+.custom-navbar {
+    height: 20%;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+}

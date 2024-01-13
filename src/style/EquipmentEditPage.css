@@ -1,0 +1,51 @@
+.myClass {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+.photomy,
+.pricemy {
+    width: 600px;
+}
+
+input,
+textarea,
+button {
+    max-width: 600px;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.buttonmy {
+    border-radius: 10px;
+    margin-top: 50px;
+    max-width: 400px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttonmy:hover {
+    background-color: #0758af;
+    color: #fff;
+    cursor: pointer;
+}
+
+.photoImg {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Add your other styles here if needed */

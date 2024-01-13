@@ -1,0 +1,11 @@
+.text-white {
+  color: #000000;
+  /* White font color */
+}
+
+.btn-primary {
+  color: #000000;
+  /* Black font color for the button */
+  background-color: #ffffff;
+  /* White background color for the button */
+}
