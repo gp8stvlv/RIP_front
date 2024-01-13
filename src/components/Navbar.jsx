@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/Image';
-import logoImage from '/logoCH.jpeg';
 import '../style/Navbar.css';
-import personIcon from '/logo-user.png';
 
 function NavbarEq() {
 
@@ -30,13 +27,11 @@ function NavbarEq() {
   return (
     <Navbar className="color-navbar" expand="lg">
       <Container>
-        {/* ... (existing code) */}
         <Nav className="ms-auto">
           <Link to="/catalog" className="btns-log">
             Каталог
           </Link>
 
-          {/* Conditionally render "Add Equipment" button if the user is a moderator */}
           {isModerator && (
             <Link to="/equipment" className="btns-log">
               Список услуг для редактирования

@@ -15,8 +15,10 @@ import '../style/ModelCard.css';
 
 const Catalog = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+    const searchValue = useSelector((state) => state.searchCatalog.searchText);
+    const priceValue = useSelector((state) => state.searchCatalog.price);
+
 
     const handleGetCatalog = async () => {
         dispatch(getCatalog());
@@ -28,9 +30,9 @@ const Catalog = () => {
 
     const [catalogData, setCatalogData] = useState(null);
 
-    const handleSearchSubmit = async (queryParams) => {
+    const handleSearchSubmit = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/equipment/${queryParams}`, {
+            const response = await axios.get(`http://localhost:8000/equipment?type=${searchValue}&price=${priceValue}`, {
                 withCredentials: true,
             });
 
@@ -43,7 +45,7 @@ const Catalog = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/equipment/', {
+                const response = await axios.get(`http://localhost:8000/equipment?type=${searchValue}&price=${priceValue}`, {
                     withCredentials: true,
                 });
 
@@ -56,10 +58,10 @@ const Catalog = () => {
 
         fetchData();
 
-        const queryParams = '?type=&price=';
-        dispatch(setSearchParams(queryParams));
-        handleSearchSubmit(queryParams);
-    }, [dispatch]);
+        // Use searchValue and priceValue directly in the URL
+        dispatch(setSearchParams(`?type=${searchValue}&price=${priceValue}`));
+        handleSearchSubmit();
+    }, [dispatch, searchValue, priceValue]);
 
     const handleAddToBucket = async (chemistryProductId, userRequestId) => {
         try {
