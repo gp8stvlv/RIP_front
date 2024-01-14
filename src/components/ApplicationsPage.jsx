@@ -34,7 +34,14 @@ const ApplicationsPage = () => {
         params: queryParams,
         withCredentials: true,
       });
-      setRequests(response.data.requests || []);
+
+      // Фильтрация результатов запроса на стороне клиента по имени пользователя
+      const filteredRequests = response.data.requests.filter(request => {
+        const requestUsername = request.username || '';
+        return username.toLowerCase().trim() === '' || requestUsername.toLowerCase().includes(username.toLowerCase().trim());
+      });
+
+      setRequests(filteredRequests || []);
     } catch (error) {
       console.error('Error fetching data:', error.response);
     }
@@ -49,6 +56,7 @@ const ApplicationsPage = () => {
     } else if (id === 'formation-date-to-input') {
       setLocalFormationDateTo(value);
     } else if (id === 'username-input') {
+      console.log('Updating username:', value);
       setLocalUsername(value);
     }
   };
@@ -74,12 +82,12 @@ const ApplicationsPage = () => {
 
     const newPollInterval = setInterval(() => {
       fetchData({
-        status: localStatus,
-        formation_date_from: localFormationDateFrom,
-        formation_date_to: localFormationDateTo,
-        username: localUsername,
+        status: status,
+        formation_date_from: formationDateFrom,
+        formation_date_to: formationDateTo,
+        username: username,
       });
-    }, 1000); // Poll every 5 seconds
+    }, 1000);
 
     setPollInterval(newPollInterval);
   };

@@ -8,7 +8,6 @@ import '../style/TableRow.css';
 const TableRow = ({ application }) => {
   const [isListOpen, setListOpen] = useState(false);
 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const user = useSelector((state) => state.auth.user);
   const isModerator = user?.role === 'moderator';
 
@@ -57,23 +56,19 @@ const TableRow = ({ application }) => {
       {isModerator && (
         <td>{application.username}</td>
       )}
-
-      <td>{application.moderatorname}</td> {/* Display the username in the "User" column */}
+      <td>{application.moderatorname}</td>
       <td>
         <Link to={`/catalog/applications/${application.request_id}`}>Подробнее</Link>
       </td>
-
       {isModerator && (
-        <>
-          <td>
-            {application.status === 'в работе' && application.moderatorname === null && (
-              <>
-                <button onClick={() => handleStatusChange('завершен')}>Завершить</button>
-                <button onClick={() => handleStatusChange('отменен')}>Отменить</button>
-              </>
-            )}
-          </td>
-        </>
+        <td>
+          {application.status === 'в работе' && application.moderatorname === null && (
+            <>
+              <button onClick={() => handleStatusChange('завершен')}>Завершить</button>
+              <button onClick={() => handleStatusChange('отменен')}>Отменить</button>
+            </>
+          )}
+        </td>
       )}
     </tr>
   );

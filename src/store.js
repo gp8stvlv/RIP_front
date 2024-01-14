@@ -10,10 +10,6 @@ import applicationReducer from './reducers/applicationReducer';
 import searchCatalogReducer from './slices/searchCatalogSlice'; // Import the resetBucket actio
 import searchApplicationReducer from './slices/searchApplicationSlice';
 
-
-
-
-
 const loadState = () => {
   try {
     const serializedState = localStorage.getItem('reduxState');
