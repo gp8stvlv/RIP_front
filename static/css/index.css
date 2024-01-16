@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: rgb(50, 73, 91);
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    /* Увеличиваем высоту верхней полоски */
+    position: fixed;
+    /* Фиксируем верхнюю полоску */
+    top: 0;
+    /* Закрепляем верхнюю полоску наверху */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /* Устанавливаем высший z-index, чтобы верхняя полоска была поверх других элементов */
+    transition: background-color 0.3s;
+    /* Добавляем плавное изменение цвета фона */
+}
+
+
+.logo {
+    width: 100px;
+    /* Устанавливаем ширину логотипа в 10 пикселей */
+    height: 100px;
+    /* Устанавливаем высоту логотипа в 10 пикселей */
+    margin-left: 10px;
+    /* Добавляем отступ слева от логотипа */
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.header-title {
+    flex-grow: 1;
+    /* Расширяем контейнер с текстом, чтобы он занимал доступное пространство */
+    text-align: right;
+    /* Выравниваем текст справа */
+    margin-right: 10px;
+    /* Добавляем отступ справа от текста */
+}
+
+.basket {
+    width: 50px;
+    margin-left: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.basket:hover {
+    transform: scale(1.3);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.footer {
+    position: fixed;
+    top: calc(100vh - 50px);
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(50, 73, 91);
+}
