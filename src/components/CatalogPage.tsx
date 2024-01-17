@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import './Catalog.css';
 import logoImage from './CH.png';
+import '../images/Catalog.css';
 
 // Определение типа для объекта "Букет"
 interface chemistryEquipment {
@@ -19,23 +20,22 @@ interface chemistryEquipment {
 const chemistryEquipmentMocks: chemistryEquipment[] = [
     {
         chemistry_product_id: 1,
-        type: 'Test Equipment 1',
-        description: 'Description for Test Equipment 1',
-        image_url: 'https://example.com/image1.jpg',
+        type: 'Автоклав с вертикальной загрузкой MVS-83, объем 75 литров',
+        description: 'Паровой стерилизатор с вертикальной загрузкой с температурой стерилизации 115 - 135°C.',
+        image_url: '../static/images/spektrofotometr-nano-500.png',
         price: '100',
-        status: 'In Stock',
-        image_url_after_serializer: 'https://example.com/image1_after_serializer.jpg',
+        status: 'введен',
+        image_url_after_serializer: '../static/images/spektrofotometr-nano-500.png',
     },
     {
         chemistry_product_id: 2,
-        type: 'Test Equipment 2',
-        description: 'Description for Test Equipment 2',
-        image_url: 'https://example.com/image2.jpg',
+        type: 'Автоклав с вертикальной загрузкой MVS-83, объем 75 литров',
+        description: 'Паровой стерилизатор с вертикальной загрузкой с температурой стерилизации 115 - 135°C.',
+        image_url: '../static/images/avtoklav-s-vertikalnoy-zagruzkoy-mvs-83-obem-75-litrov.jpg',
         price: '150',
-        status: 'Out of Stock',
-        image_url_after_serializer: 'https://example.com/image2_after_serializer.jpg',
+        status: 'введен',
+        image_url_after_serializer: '../static/images/avtoklav-s-vertikalnoy-zagruzkoy-mvs-83-obem-75-litrov.jpg',
     },
-    // Add more mock objects as needed
 ];
 
 // Компонент "Catalog" представляет собой функциональный компонент React

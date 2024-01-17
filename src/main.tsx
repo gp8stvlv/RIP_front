@@ -7,7 +7,7 @@ const App = () => (
   <HashRouter>
     <Routes>
       <Route path="/catalog/" element={<Catalog />} />
-      <Route path="/bouquetss/:id/" element={<EquipmentDetail />} />
+      <Route path="/catalog/:id/" element={<EquipmentDetail />} />
     </Routes>
   </HashRouter>
 );
