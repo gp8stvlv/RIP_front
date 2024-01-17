@@ -226,6 +226,11 @@ body.scrolled header {
 .breadcrumb-separator {
     margin: 0 10px;
     /* Add margin around the separator */
-    color: #555;
+    color: #073200;
     /* Separator color */
+}
+
+.album {
+    margin-top: 200px;
+    margin-bottom: 50px;
 }
