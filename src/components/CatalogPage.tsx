@@ -140,7 +140,6 @@ const CatalogPage: React.FC = () => {
                                     {/* <p className="card-text">{chemistryEquipment.description}</p> */}
                                     <p className="card-text">Цена: {chemistryEquipment.price} рублей</p>
                                     {/* Add more text elements here if needed */}
-
                                     <a
                                         href={`RIP_front/#catalog/${chemistryEquipment.chemistry_product_id}/`}
                                         className="btn btn-primary"
@@ -148,6 +147,7 @@ const CatalogPage: React.FC = () => {
                                     >
                                         Подробнее
                                     </a>
+
                                 </div>
                             </div>
                         </div>
