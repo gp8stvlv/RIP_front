@@ -103,7 +103,7 @@ const CatalogPage: React.FC = () => {
                                     <h5 className="card-title">{equipment.type}</h5>
                                     <p className="card-text">{equipment.description}</p>
                                     <p className="card-text">Цена: {equipment.price} рублей</p>
-                                    <a href={`/#equipment/${equipment.chemistry_product_id}/`} className="btn btn-primary">
+                                    <a href={`/RIP_front/#equipment/${equipment.chemistry_product_id}/`} className="btn btn-primary">
                                         Подробнее
                                     </a>
                                 </div>
