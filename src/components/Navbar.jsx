@@ -10,7 +10,6 @@ function NavbarEq() {
 
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const user = useSelector((state) => state.auth.user);
-  const isModerator = user?.role === 'moderator'; // Replace 'модератор' with the actual role name
 
   const [showUserProfileMenu, setShowUserProfileMenu] = React.useState(false);
 
@@ -31,18 +30,6 @@ function NavbarEq() {
           <Link to="/catalog" className="btns-log">
             Каталог
           </Link>
-
-          {isModerator && (
-            <Link to="/equipment" className="btns-log">
-              Список услуг для редактирования
-            </Link>
-          )}
-
-          {isModerator && (
-            <Link to="/addEquipment" className="btns-log">
-              Добавить оборудование
-            </Link>
-          )}
 
           {isAuthenticated ? (
             <>

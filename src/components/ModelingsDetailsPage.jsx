@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import NavbarEq from './Navbar';
-import FooterAnyMetro from './Footer';
+import FooterChemistry from './Footer';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 import { getModelingsDetails } from '../actions/modelingsDetailsActions';
@@ -36,7 +36,7 @@ const ModelingsDetailsPage = () => {
           <Link to="/catalog/" className="btn-back-to-models">Вернуться к услугам</Link>
         </div>
       </div>
-      <FooterAnyMetro />
+      <FooterChemistry />
     </div>
   );
 };

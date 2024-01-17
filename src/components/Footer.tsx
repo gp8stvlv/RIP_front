@@ -3,7 +3,7 @@ import '../style/Footer.css';
 
 // import backgroundImage from '/footer.webp';
 
-function FooterAnyMetro() {
+function FooterChemistry() {
   return (
     <div>
       {/* <Image src={backgroundImage} fluid alt="Background Image" className="full-width-image" /> */}
@@ -18,4 +18,4 @@ function FooterAnyMetro() {
   );
 }
 
-export default FooterAnyMetro;
+export default FooterChemistry;

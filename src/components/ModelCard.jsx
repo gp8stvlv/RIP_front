@@ -21,7 +21,6 @@ const ModelingsCard = ({
   const user = useSelector((state) => state.auth.user);
 
   const isUserAuthorized = isAuthenticated;
-  const isModerator = user?.role === 'moderator'; // Replace 'модератор' with the actual role name
 
   const navigate = useNavigate();
 
@@ -33,8 +32,6 @@ const ModelingsCard = ({
     }
   };
 
-  // console.log("user", user)
-  // console.log("isModerator", isModerator)
 
   return (
     <div className="custom-card">

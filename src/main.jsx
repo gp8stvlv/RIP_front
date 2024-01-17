@@ -13,9 +13,7 @@ import RegistrationPage from './components/RegistrationPage.jsx';
 import ApplicationsPage from './components/ApplicationsPage.jsx'
 import Bucket from './components/Bucket.jsx'
 import Catalog from './components/Catalog.jsx'
-import AddModelingsCard from './components/AddModelingsCard.jsx'
-import EquipmentPage from './components/EquipmentPage.jsx'
-import EquipmentEditPage from './components/EquipmentEditPage.jsx'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './store';
@@ -35,9 +33,8 @@ ReactDOM.render(
           <Route path="registration/" element={<RegistrationPage />} />
           <Route path="catalog/applications/:id" element={<Bucket />} />
           <Route path="catalog/applications/" element={<ApplicationsPage />} />
-          <Route path="/addEquipment" element={<AddModelingsCard />} />
-          <Route path="/equipment" element={<EquipmentPage />} />
-          <Route path="/equipment/:equipmentId" element={<EquipmentEditPage />} />
+
+
         </Routes>
         <ToastContainer position="top-right" autoClose={1000} />
       </Router>

@@ -6,9 +6,6 @@ import NavbarEq from './Navbar';
 import Header from './Header';
 import SearchBar from './SearchBar';  // Import the SearchBar component
 import { getCatalog } from '../actions/catalogActions';
-import { setSearchParams } from '../actions/searchCatalogActions';
-import { addModelingToBucket } from '../actions/bucketActions';
-import { useNavigate } from 'react-router-dom';
 import { FaShoppingBasket } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import '../style/ModelCard.css';
@@ -58,8 +55,6 @@ const Catalog = () => {
 
         fetchData();
 
-        // Use searchValue and priceValue directly in the URL
-        dispatch(setSearchParams(`?type=${searchValue}&price=${priceValue}`));
         handleSearchSubmit();
     }, [dispatch, searchValue, priceValue]);
 

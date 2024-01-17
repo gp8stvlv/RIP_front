@@ -5,9 +5,7 @@ import modelingsReducer from './slices/modelingsSlice';
 import modelingsDetailsReducer from './slices/modelingsDetailsSlice';
 import authReducer from './slices/authSlice';
 import bucketReducer, { resetBucket } from './slices/bucketSlice';
-import applicationReducer from './reducers/applicationReducer';
 import searchCatalogReducer from './slices/searchCatalogSlice';
-import searchApplicationReducer from './slices/searchApplicationSlice';
 
 const loadState = () => {
   try {
@@ -34,13 +32,11 @@ const preloadedState = loadState();
 
 const store = configureStore({
   reducer: {
-    searchApplication: searchApplicationReducer,
     searchCatalog: searchCatalogReducer,
     modelings: modelingsReducer,
     modelingsDetails: modelingsDetailsReducer,
     auth: authReducer,
     bucket: bucketReducer,
-    applications: applicationReducer,
   },
   middleware: [thunk],
   preloadedState,

@@ -113,8 +113,6 @@ const Bucket = () => {
         };
         return new Date(dateTimeString).toLocaleDateString('ru-RU', options);
     };
-    console.log("state", state)
-    // console.log("state.userRequestId", state.userRequestId ?? null)
 
     return (
         <>

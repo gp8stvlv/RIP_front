@@ -1,11 +1,8 @@
 // modelingsActions.js
 import axios from 'axios';
 import {
-  setSearchValue,
   setModelings,
   setLoading,
-  setMinPrice,
-  setMaxPrice,
 } from '../slices/modelingsSlice';
 
 import { setDraftId } from '../slices/bucketSlice';

@@ -25,8 +25,6 @@ const ApplicationsPage = () => {
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  const isModerator = user?.role === 'moderator';
-  const location = useLocation();
 
   const fetchData = async (queryParams = {}) => {
     try {
@@ -92,28 +90,6 @@ const ApplicationsPage = () => {
     setPollInterval(newPollInterval);
   };
 
-  const handleStatusChange = async (requestId, newStatus) => {
-    try {
-      await axios.put(`http://localhost:8000/request/moderator/${requestId}/put/`, {
-        status: newStatus,
-      }, {
-        withCredentials: true,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      fetchData({
-        status: localStatus,
-        formation_date_from: localFormationDateFrom,
-        formation_date_to: localFormationDateTo,
-        username: localUsername,
-      });
-    } catch (error) {
-      console.error('Error updating status:', error);
-    }
-  };
-
   useEffect(() => {
     fetchData({
       status: status,
@@ -158,15 +134,6 @@ const ApplicationsPage = () => {
           value={localFormationDateTo}
           onChange={handleInputChange}
         />
-        {isModerator && (
-          <input
-            type="text"
-            id="username-input"
-            placeholder="Имя пользователя"
-            value={localUsername}
-            onChange={handleInputChange}
-          />
-        )}
         <button type="button" id="search-button" onClick={handleSearchClick}>
           Искать
         </button>
@@ -183,10 +150,8 @@ const ApplicationsPage = () => {
                   <th>Дата и время создания</th>
                   <th>Дата и время формирования</th>
                   <th>Дата и время выполнения</th>
-                  {isModerator && <th>Пользователь</th>}
                   <th>Модератор</th>
                   <th>Подробнее</th>
-                  {isModerator && <th>Действия</th>}
                 </tr>
               </thead>
               <tbody>
