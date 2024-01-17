@@ -21,7 +21,7 @@ const SearchBar = ({ onSubmit }) => {
         if (id === 'search-input') {
             setLocalSearchValue(value);
         } else if (id === 'price-input') {
-            const parsedValue = value === '' ? '' : Math.max(0, parseInt(value, 10)); // Ensure value is non-negative
+            const parsedValue = value === '' ? '' : Math.max(0, parseInt(value, 10));
             setLocalPriceValue(parsedValue);
         }
     };

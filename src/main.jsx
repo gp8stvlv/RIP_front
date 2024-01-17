@@ -20,15 +20,14 @@ import EquipmentEditPage from './components/EquipmentEditPage.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './store';
 
-const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const base_path = isLocal ? '/' : 'metrostreams-frontend/';
+const base_path = '/'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router basename={base_path}>
         <Routes>
-          <Route path={base_path} element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="catalog/" element={<Catalog />} />
           <Route path="catalog/:id/" element={<ModelingsDetailsPage />} />
           <Route path="login/" element={<AuthorizationPage />} />
