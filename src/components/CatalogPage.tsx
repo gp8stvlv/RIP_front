@@ -141,7 +141,7 @@ const CatalogPage: React.FC = () => {
                                     <p className="card-text">Цена: {chemistryEquipment.price} рублей</p>
                                     {/* Add more text elements here if needed */}
                                     <a
-                                        href={`RIP_front/#catalog/${chemistryEquipment.chemistry_product_id}/`}
+                                        href={`/#catalog/${chemistryEquipment.chemistry_product_id}/`}
                                         className="btn btn-primary"
                                         style={{ height: '40px' }}
                                     >
