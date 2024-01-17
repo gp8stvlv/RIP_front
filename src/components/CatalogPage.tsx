@@ -39,7 +39,6 @@ const chemistryEquipmentMocks: chemistryEquipment[] = [
     },
 ];
 
-// Компонент "Catalog" представляет собой функциональный компонент React
 const CatalogPage: React.FC = () => {
     // Хук useNavigate предоставляет функцию для навигации между страницами
     const navigateTo = useNavigate();
@@ -86,7 +85,7 @@ const CatalogPage: React.FC = () => {
     // Обработчик события для кнопки поиска
     const handleSearchClick = () => {
         // Перенаправление на ту же страницу с новыми параметрами запроса
-        navigateTo(`/RIP_Front/catalog/?type=${searchValue}&price=${priceValue}`);
+        navigateTo(`/RIP_Front/?type=${searchValue}&price=${priceValue}`);
         // Запрос данных после перенаправления на новый URL
         fetchChemistryEquipments(searchValue, priceValue);
     };
@@ -143,7 +142,7 @@ const CatalogPage: React.FC = () => {
                                     {/* Add more text elements here if needed */}
 
                                     <a
-                                        href={`/catalog/${chemistryEquipment.chemistry_product_id}/`}
+                                        href={`RIP_front/#catalog/${chemistryEquipment.chemistry_product_id}/`}
                                         className="btn btn-primary"
                                         style={{ height: '40px' }}
                                     >

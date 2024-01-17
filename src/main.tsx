@@ -6,7 +6,7 @@ import { Catalog, EquipmentDetail } from './App';
 const App = () => (
   <HashRouter>
     <Routes>
-      <Route path="/catalog/" element={<Catalog />} />
+      <Route path="/" element={<Catalog />} />
       <Route path="/catalog/:id/" element={<EquipmentDetail />} />
     </Routes>
   </HashRouter>
