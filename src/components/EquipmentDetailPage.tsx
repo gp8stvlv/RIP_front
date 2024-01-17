@@ -17,7 +17,7 @@ const EquipmentDetailPage: React.FC = () => {
 
 
     const breadcrumbsItems = [
-        { label: 'Каталог', link: '/RIP_Front/equipment/' },
+        { label: 'Каталог', link: 'equipment/' },
         { label: 'Подробнее', link: '' }
     ];
 
