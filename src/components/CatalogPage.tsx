@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import './Catalog.css';
 import logoImage from './CH.png';
+import image_1 from '/static/images/spektrofotometr-nano-500.png'
+import image_2 from '/static/images/avtoklav-s-vertikalnoy-zagruzkoy-mvs-83-obem-75-litrov.jpg'
 
 // Определение типа для объекта "Букет"
 interface chemistryEquipment {
@@ -21,19 +23,19 @@ const chemistryEquipmentMocks: chemistryEquipment[] = [
         chemistry_product_id: 1,
         type: 'Автоклав с вертикальной загрузкой MVS-83, объем 75 литров',
         description: 'Паровой стерилизатор с вертикальной загрузкой с температурой стерилизации 115 - 135°C.',
-        image_url: '../static/images/spektrofotometr-nano-500.png',
+        image_url: image_1,
         price: '100',
         status: 'введен',
-        image_url_after_serializer: '../static/images/spektrofotometr-nano-500.png',
+        image_url_after_serializer: image_1,
     },
     {
         chemistry_product_id: 2,
         type: 'Автоклав с вертикальной загрузкой MVS-83, объем 75 литров',
         description: 'Паровой стерилизатор с вертикальной загрузкой с температурой стерилизации 115 - 135°C.',
-        image_url: '../static/images/avtoklav-s-vertikalnoy-zagruzkoy-mvs-83-obem-75-litrov.jpg',
+        image_url: image_2,
         price: '150',
         status: 'введен',
-        image_url_after_serializer: '../static/images/avtoklav-s-vertikalnoy-zagruzkoy-mvs-83-obem-75-litrov.jpg',
+        image_url_after_serializer: image_2,
     },
 ];
 
@@ -141,7 +143,7 @@ const CatalogPage: React.FC = () => {
                                     {/* Add more text elements here if needed */}
 
                                     <a
-                                        href={`/EquipmentDetail/${chemistryEquipment.chemistry_product_id}/`}
+                                        href={`/catalog/${chemistryEquipment.chemistry_product_id}/`}
                                         className="btn btn-primary"
                                         style={{ height: '40px' }}
                                     >
